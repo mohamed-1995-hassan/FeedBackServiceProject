@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedBackServiceProject.Api", "FeedBackServiceProject\FeedBackServiceProject.Api.csproj", "{F6C1B66B-6F34-4152-8659-2E9CF47A740E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4BDE3647-0630-4EDF-AC56-82D7224A8A1B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{E0DF3CDA-CCA3-4AEE-BA4B-0F25ADAE1900}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedBackServiceProject.Core", "FeedBackServiceProject.Core\FeedBackServiceProject.Core.csproj", "{71D29B49-0055-4DC5-A856-4658BFBC8BAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedBackServiceProject.Infrastructure", "FeedBackServiceProject.Infrastructure\FeedBackServiceProject.Infrastructure.csproj", "{01AC2777-2EFF-43E4-8703-E0128514C996}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedBackServiceProject.Api.Test", "FeedBackServiceProject.Api.Test\FeedBackServiceProject.Api.Test.csproj", "{8EA01A4D-4118-48A1-B2C9-6FFE42F1E4D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedBackServiceProject.Core.Test", "FeedBackServiceProject.Core.Test\FeedBackServiceProject.Core.Test.csproj", "{6876046C-6B8E-4A29-B38A-408F9A3E0EB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedBackServiceProject.Infrastructre.Test", "FeedBackServiceProject.Infrastructre.Test\FeedBackServiceProject.Infrastructre.Test.csproj", "{BF4AC236-9D7B-4FE8-9CC7-09939976E09B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F6C1B66B-6F34-4152-8659-2E9CF47A740E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6C1B66B-6F34-4152-8659-2E9CF47A740E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6C1B66B-6F34-4152-8659-2E9CF47A740E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6C1B66B-6F34-4152-8659-2E9CF47A740E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{71D29B49-0055-4DC5-A856-4658BFBC8BAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{71D29B49-0055-4DC5-A856-4658BFBC8BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{71D29B49-0055-4DC5-A856-4658BFBC8BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{71D29B49-0055-4DC5-A856-4658BFBC8BAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01AC2777-2EFF-43E4-8703-E0128514C996}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01AC2777-2EFF-43E4-8703-E0128514C996}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01AC2777-2EFF-43E4-8703-E0128514C996}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01AC2777-2EFF-43E4-8703-E0128514C996}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EA01A4D-4118-48A1-B2C9-6FFE42F1E4D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EA01A4D-4118-48A1-B2C9-6FFE42F1E4D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EA01A4D-4118-48A1-B2C9-6FFE42F1E4D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EA01A4D-4118-48A1-B2C9-6FFE42F1E4D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6876046C-6B8E-4A29-B38A-408F9A3E0EB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6876046C-6B8E-4A29-B38A-408F9A3E0EB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6876046C-6B8E-4A29-B38A-408F9A3E0EB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6876046C-6B8E-4A29-B38A-408F9A3E0EB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF4AC236-9D7B-4FE8-9CC7-09939976E09B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF4AC236-9D7B-4FE8-9CC7-09939976E09B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF4AC236-9D7B-4FE8-9CC7-09939976E09B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF4AC236-9D7B-4FE8-9CC7-09939976E09B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F6C1B66B-6F34-4152-8659-2E9CF47A740E} = {4BDE3647-0630-4EDF-AC56-82D7224A8A1B}
+		{71D29B49-0055-4DC5-A856-4658BFBC8BAB} = {4BDE3647-0630-4EDF-AC56-82D7224A8A1B}
+		{01AC2777-2EFF-43E4-8703-E0128514C996} = {4BDE3647-0630-4EDF-AC56-82D7224A8A1B}
+		{8EA01A4D-4118-48A1-B2C9-6FFE42F1E4D4} = {E0DF3CDA-CCA3-4AEE-BA4B-0F25ADAE1900}
+		{6876046C-6B8E-4A29-B38A-408F9A3E0EB6} = {E0DF3CDA-CCA3-4AEE-BA4B-0F25ADAE1900}
+		{BF4AC236-9D7B-4FE8-9CC7-09939976E09B} = {E0DF3CDA-CCA3-4AEE-BA4B-0F25ADAE1900}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D8BD61B-57A5-4686-ACAB-46F340310D55}
+	EndGlobalSection
+EndGlobal

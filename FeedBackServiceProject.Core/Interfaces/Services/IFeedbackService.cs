@@ -9,9 +9,10 @@ namespace FeedBackServiceProject.Core.Interfaces.Services
 {
     public interface IFeedbackService
     {
-        Task<IEnumerable<Feedback>> GetAllFeedbacks();
-        Task<Feedback> GetFeedbackById();
         Task<bool> CreateFeedback(Feedback feedback);
         Task<bool> DeleteFeedback(int id);
+        Task<IEnumerable<Feedback>> GetAllFeedbacks();
+        Task<Feedback> GetFeedbackById(int id);
+        
     }
 }

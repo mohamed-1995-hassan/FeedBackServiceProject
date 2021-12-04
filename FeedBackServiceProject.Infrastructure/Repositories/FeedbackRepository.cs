@@ -22,12 +22,18 @@ namespace FeedBackServiceProject.Infrastructure.Repositories
         }
         public async Task<bool> CreateFeedback(Feedback feedback)
         {
-            throw new NotImplementedException();
+            Entities.Feedback feedbackSaved = _mapper.Map<FeedBackServiceProject.Infrastructure.Entities.Feedback>(feedback);
+            _feedBackServiceDbContext.Feedbacks.Add(feedbackSaved);
+            _feedBackServiceDbContext.SaveChanges();
+            return true;
         }
 
         public async Task<bool> DeleteFeedback(int id)
         {
-            throw new NotImplementedException();
+            var result = _feedBackServiceDbContext.Feedbacks.Find(id);
+            _feedBackServiceDbContext.Feedbacks.Remove(result);
+            _feedBackServiceDbContext.SaveChanges();
+            return true;
         }
 
         public async Task<IEnumerable<Feedback>> GetAllFeedbacks()
@@ -36,9 +42,10 @@ namespace FeedBackServiceProject.Infrastructure.Repositories
             return _mapper.Map<IEnumerable<Feedback>>(dbFeedbacks);
         }
 
-        public async Task<Feedback> GetFeedbackById()
+        public async Task<Feedback> GetFeedbackById(int id)
         {
-            throw new NotImplementedException();
+            Entities.Feedback? feedback =await _feedBackServiceDbContext.Feedbacks.FindAsync(id);
+            return _mapper.Map<Feedback>(feedback);
         }
     }
 }

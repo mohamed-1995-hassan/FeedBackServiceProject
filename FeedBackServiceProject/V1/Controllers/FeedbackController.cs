@@ -7,8 +7,13 @@ namespace FeedBackServiceProject.Api.V1.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+
+    //[Route("api/" + ApiConstants.ServiceName + "/v{api-version:apiVersion}/[controller]")]
+    //[ApiVersion("1.0")]
+    //[ApiController]
     public class FeedbackController : ControllerBase
     {
+        
         public readonly IFeedbackService _feedbackService;
         public FeedbackController(IFeedbackService feedbackService)
         {
@@ -17,14 +22,42 @@ namespace FeedBackServiceProject.Api.V1.Controllers
 
         [HttpGet]
         [Route("GetFeedBacks")]
-        public async Task<ActionResult<IEnumerable<Feedback>>> GetAllFeedbacks()
+        [HttpGet]
+        public ActionResult<IEnumerable<Feedback>> GetAllFeedbacks()
         {
-           var response = await _feedbackService.GetAllFeedbacks();
-            if(response==null)
+            return Ok(_feedbackService.GetAllFeedbacks());
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult<Feedback> GetFeedback(int id)
+        {
+            var emp = _feedbackService.GetFeedbackById(id).Result;
+
+            if (emp == null)
             {
-                return NoContent();
+                return NotFound();
             }
-            return Ok(response);
+            return emp;
+        }
+
+        [HttpPost]
+        public ActionResult<Feedback> PostFeedback(Feedback feedback)
+        {
+            _feedbackService.CreateFeedback(feedback);
+
+            return CreatedAtAction("GetEmployee", new { id = feedback.Subject });
+        }
+
+        // DELETE: api/Employees/5
+        [HttpDelete("{id}")]
+        public IActionResult DeleteFeedback(int id)
+        {
+            var employee = _feedbackService.DeleteFeedback(id);
+            if (employee == null)
+            {
+                return NotFound();
+            }
+            return NoContent();
         }
     }
 }

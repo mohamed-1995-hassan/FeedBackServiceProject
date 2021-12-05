@@ -42,7 +42,7 @@ try
     builder.Services.AddControllers();
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     builder.Services.AddDbContext<FeedBackServiceDbContext>(options =>
-           options.UseSqlServer("DefaultConn"));
+    options.UseSqlServer("DefaultConn"));
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.configreSwager();
     builder.Services.AddAutoMapper(typeof(Program));

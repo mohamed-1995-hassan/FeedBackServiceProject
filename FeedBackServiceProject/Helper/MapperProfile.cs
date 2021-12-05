@@ -7,6 +7,7 @@ namespace FeedBackServiceProject.Api.Helper
         public MapperProfile()
         {
             CreateMap<Infrastructure.Entities.Feedback, Core.Models.Feedback>();
+            CreateMap<Core.Models.Feedback, Infrastructure.Entities.Feedback>();
         }
     }
 }

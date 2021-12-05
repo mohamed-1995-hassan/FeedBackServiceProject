@@ -22,7 +22,7 @@ namespace FeedBackServiceProject.Infrastructure.Repositories
         }
         public async Task<bool> CreateFeedback(Feedback feedback)
         {
-            Entities.Feedback feedbackSaved = _mapper.Map<FeedBackServiceProject.Infrastructure.Entities.Feedback>(feedback);
+            Entities.Feedback feedbackSaved = _mapper.Map<Entities.Feedback>(feedback);
             _feedBackServiceDbContext.Feedbacks.Add(feedbackSaved);
             _feedBackServiceDbContext.SaveChanges();
             return true;
@@ -39,7 +39,8 @@ namespace FeedBackServiceProject.Infrastructure.Repositories
         public async Task<IEnumerable<Feedback>> GetAllFeedbacks()
         {
             var dbFeedbacks = await _feedBackServiceDbContext.Feedbacks.ToListAsync();
-            return _mapper.Map<IEnumerable<Feedback>>(dbFeedbacks);
+            IEnumerable<Feedback> Feedbacks = _mapper.Map<IEnumerable<Feedback>>(dbFeedbacks);
+            return Feedbacks;
         }
 
         public async Task<Feedback> GetFeedbackById(int id)

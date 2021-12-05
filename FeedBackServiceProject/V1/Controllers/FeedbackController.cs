@@ -25,7 +25,7 @@ namespace FeedBackServiceProject.Api.V1.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<Feedback>> GetAllFeedbacks()
         {
-            return Ok(_feedbackService.GetAllFeedbacks());
+            return Ok(_feedbackService.GetAllFeedbacks().Result);
         }
 
         [HttpGet("{id}")]
@@ -37,7 +37,7 @@ namespace FeedBackServiceProject.Api.V1.Controllers
             {
                 return NotFound();
             }
-            return emp;
+            return Ok(emp);
         }
 
         [HttpPost]
@@ -45,7 +45,7 @@ namespace FeedBackServiceProject.Api.V1.Controllers
         {
             _feedbackService.CreateFeedback(feedback);
 
-            return CreatedAtAction("GetEmployee", new { id = feedback.Subject });
+            return Ok("created");
         }
 
         // DELETE: api/Employees/5
@@ -57,7 +57,7 @@ namespace FeedBackServiceProject.Api.V1.Controllers
             {
                 return NotFound();
             }
-            return NoContent();
+            return Ok(employee);
         }
     }
 }

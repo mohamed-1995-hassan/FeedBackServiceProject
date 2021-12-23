@@ -66,9 +66,6 @@ namespace FeedBackServiceProject.Api.Middlewares
                     default:
                         await WriteAndLogResponseAsync(ex, context, HttpStatusCode.InternalServerError, LogLevel.Error, "Server Exception ");
                         break;
-                        
-
-
 
                 }
             }

@@ -4,6 +4,7 @@ using FeedBackServiceProject.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FeedBackServiceProject.Infrastructure.Migrations
 {
     [DbContext(typeof(FeedBackServiceDbContext))]
-    partial class FeedBackServiceDbContextModelSnapshot : ModelSnapshot
+    [Migration("20211214161606_Identity_migration")]
+    partial class Identity_migration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

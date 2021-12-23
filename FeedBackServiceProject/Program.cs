@@ -10,6 +10,8 @@ using NLog;
 using NLog.Extensions.Logging;
 using NLog.Web;
 using FeedBackServiceProject.Api.Middlewares;
+using Microsoft.AspNetCore.Identity;
+using FeedBackServiceProject.Infrastructure.Entities;
 
 string currentEnvironment = Environment.GetEnvironmentVariable("ASPNETCORE_ENVIRONMENT");
 IConfigurationBuilder configurationBuilder = new ConfigurationBuilder()
@@ -43,6 +45,8 @@ try
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
     builder.Services.AddDbContext<FeedBackServiceDbContext>(options =>
     options.UseSqlServer("DefaultConn"));
+    builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+      .AddEntityFrameworkStores<FeedBackServiceDbContext>();
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.configreSwager();
     builder.Services.AddAutoMapper(typeof(Program));
